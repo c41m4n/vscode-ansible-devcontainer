@@ -1,0 +1,2 @@
+ansible-core==2.13.1
+ansible==6.0.0
