@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/python-3
 {
-	"name": "VSCode devcontainer with poetry",
+	"name": "VSCode devcontainer template for Ansible dev",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
@@ -14,8 +14,6 @@
 			"NODE_VERSION": "none"
 		}
 	},
-	// "postAttachCommand": "poetry add $( cat requirements.txt )",
-	// "postAttachCommand": "poetry shell",
 	"runArgs": [
 		"-v",
 		"${localEnv:HOME}/.ssh:/home/vscode/.ssh:rw"
@@ -54,10 +52,6 @@
 			]
 		}
 	},
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
-	"postCreateCommand": "pip3 install --disable-pip-version-check --user -r requirements.txt",
-
+	"postCreateCommand": "pip3 install --disable-pip-version-check --user -r requirements-dev.txt",
 	"remoteUser": "vscode"
 }
