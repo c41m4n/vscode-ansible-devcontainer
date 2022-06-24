@@ -52,6 +52,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip3 install --disable-pip-version-check --user -r requirements-dev.txt",
+	// "postCreateCommand": "pip3 install --disable-pip-version-check --user -r requirements-dev.txt",
 	"remoteUser": "vscode"
 }
